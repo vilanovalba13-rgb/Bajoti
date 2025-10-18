@@ -1,0 +1,876 @@
+/* Reset marges i padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ede9e3; /* color diferent al blanc */
+  margin: 0;
+  padding: 0;
+   font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: #2b5288;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 10; /* per sobre del vídeo */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.logo img {
+  height: 70px;
+  display: block;
+  margin-top: -10px
+}
+
+.navbar {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color:  rgb(190, 183, 183);
+}
+
+/* HERO amb vídeo */
+.hero {
+  position: relative;
+  height: 100vh; /* ocupa tota la pantalla */
+  overflow: hidden;
+}
+
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botons sobre el vídeo */
+.video-buttons {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  gap: 2rem;
+}
+
+.video-buttons .btn {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Megant', sans-serif;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.video-buttons .btn:hover {
+  color:  rgb(190, 183, 183);
+}
+
+/*Logo sobre el video*/
+.hero-title {
+  position: absolute; /* Col·loca el logo sobre el vídeo */
+  top: 35%; /* Centrat vertical, pots ajustar a 20% o 40% */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrat horitzontal i vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Per sobre del vídeo, per sota dels botons */
+  pointer-events: none; /* Evita interferències amb el vídeo */
+}
+
+.hero-logo {
+  max-width: 380px;
+  width: 35vw;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Ombra per contrast */
+}
+
+/* Overlay sobre el vídeo */
+.discover-section {
+ position: absolute;
+ left: 50%;
+ top: 85%;
+ transform: translate(-50%, -50%);
+ z-index: 11;              /* més alt per sobre d'altres elements */
+ text-align: center;
+ pointer-events: auto;
+}
+
+
+.discover-link {
+ display: inline-block;
+ color: #ffffff;
+ text-decoration: none;
+ font-weight: 700;
+ font-size: 1.05rem;
+ padding: 8px 14px;
+ background: rgba(0,0,0,0); /* Remove semitransparent background */
+ border-radius: 0; /* Remove border radius */
+ backdrop-filter: none; /* Remove blur effect */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.discover-link .custom-arrow {
+ display: block;
+ margin-top: 6px;
+ animation: bounce 1.6s infinite;
+}
+
+
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+ 40% { transform: translateY(6px); }
+ 60% { transform: translateY(3px); }
+}
+
+
+
+/* CONTINGUT */
+#Destins {
+  font-size: 1.2em;
+  margin-bottom: 18px;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ede9e3;
+}
+#Destins h1 {
+  margin-bottom: 32px;
+  color: #2b5288;
+  font-size: 2.8em;
+}
+
+#Destins h2 {
+  font-size: 1em;
+  margin-top: 24px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+#Destins p {
+  margin-bottom: 28px;
+}
+
+.ambients-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.ambient-card {
+  background-color:  #2b5288;  
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.ambient-card:hover {
+  transform: scale(1.05);
+}
+
+.ambient-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.ambient-card h3 {
+   font-family: 'Megant', sans-serif;
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+
+
+/* SOM BAJOTI */ BAJOTI
+
+.bajoti-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 10%;
+  background-color:  #d0e7f9;
+}
+
+.bajoti-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+  gap: 60px;
+}
+
+.bajoti-text {
+  flex: 1;
+  text-align: center;
+}
+
+.bajoti-text h2 {
+   font-family: 'Megant', sans-serif;
+  font-size: 2.8em;
+  text-align: center; 
+  margin-bottom: 40px;
+  color: #2b5288;
+  letter-spacing: 1px;
+}
+
+.bajoti-text p {
+  font-family: 'Montserrat', sans-serif;
+  color: #444;
+  font-size: 1.1em;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bajoti-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bajoti-image img {
+  width: 635px;
+  height: 440px;  
+  border-radius: 00px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.bajoti-text, .bajoti-image {
+  flex: 1 1 50%;
+}
+
+
+
+/* --- Títol Destacats --- */
+
+#Destacats,
+.experiencies-section {
+ background-color: #2b5288; /* blau — canvia el codi si en vols un altre */
+ color: #ffffff;
+ padding: 40px 0;
+ }
+.experiencies-titol {
+  text-align: center;         /* centra el text */
+  margin-top: 25px;           /* espai abans del títol */
+  margin-bottom: 30px;        /* espai entre el títol i el slider */
+
+
+}
+.experiencies-titol h2 {
+  font-family: 'Megant', sans-serif;
+  font-size: 3em;            /* mida del text */
+  font-weight: 700;          /* gruix mitjà */
+  color: #ffffff;           /* color del text (pots canviar-ho) */
+}
+/* --- proba stories deslizar --- */
+.slider {
+  display: flex;                      /* posa les imatges en fila */
+  gap: 30px;                          /* espai entre imatges */
+  overflow-x: auto;                   /* activa scroll horitzontal */
+  scroll-snap-type: x mandatory;      /* s’atura a cada imatge */
+  -webkit-overflow-scrolling: touch;  /* desplaçament suau mòbil */
+  padding: 10px;
+  scrollbar-width: none;              /* amaga barra (Firefox) */
+}
+.slider::-webkit-scrollbar {
+  display: none;                      /* amaga barra (Chrome, Safari...) */
+}
+.slider img {
+  scroll-snap-align: center;
+  flex: 0 0 200px;  /* amplada de cada imatge */
+max-width: 200px;                
+  border-radius: 8px;
+  user-select: none;
+   margin-top: 10px;    
+}
+
+
+
+/* --- CARTA --- */
+.carta-section {
+  background-color: #ede9e3;
+  padding: 100px 8%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Títol principal centrat */
+.carta-titol-principal {
+  text-align: center;
+  color: #2b5288;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 100px; /* separació gran abans d'ENTRANTS */
+  letter-spacing: 2px;
+}
+
+/* Fila amb ENTRANTS + plats */
+.carta-fila {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 120px; /* separació gran entre ENTRANTS i fotos */
+  flex-wrap: nowrap;
+}
+
+/* ENTRANTS a l'esquerra */
+.carta-titol {
+  flex: 0 0 200px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.carta-titol h2 {
+    font-family: 'Montserrat', sans-serif;
+   font-size: 2em;
+   font-weight: 500;
+   color: #222;
+   letter-spacing: 1px; /* menys espai entre lletres */
+}
+
+
+/* Plats */
+.carta-plats {
+  display: flex;
+  gap: 50px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.plat {
+  width: 260px;
+  text-align: center;
+}
+
+.plat img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plat img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nom-plat {
+  color: #222;
+  font-size: 1em;
+  margin-top: 10px;
+}
+/* Afegim separació extra entre cada carta-fila */
+.carta-fila + .carta-fila {
+  margin-top: 80px; /* ajusta a gust */
+}
+
+/*FONT*/
+@font-face {
+  font-family: 'Megant';
+  src: url('./Megant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Montserrat', sans-serif; /* Tipografia principal */
+}
+
+h1, h2 {
+  font-family: 'Megant', serif; /* Per títols */
+}
+
+.carta-titol-principal {
+  font-family: 'Megant', sans-serif; /* Exemple amb Google Fonts */
+}
+/* --- HERO CARTA SIMPLE --- */
+.hero-carta {
+  position: relative;
+  height: 100vh;
+  background: url('fondo-carta.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-carta .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+}
+
+.hero-carta-titol {
+  position: relative;
+  color: #f5e8d8;
+  font-family: 'Megant', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  z-index: 1;
+}
+.hero-carta {
+  background: url('../img/fotocarta1.jpg') center/cover no-repeat;
+}
+
+/* SECCIÓ RESERVA*/
+
+.reserva-section {
+ background-color: #2b5288;
+ padding: 80px 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.reserva-container {
+ background-color: #ede9e3;
+ padding: 3rem 2.5rem;
+ border-radius: 10px;
+ width: 90%;
+ max-width: 420px;
+ color: #2b5288;
+ box-shadow: #ede9e3;
+}
+
+.reserva-title {
+ text-align: center;
+ font-size: 2rem;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
+ color: #2b5288;
+}
+
+.reserva-card h2 {
+ text-align: center;
+ margin-bottom: 0.5rem;
+ font-weight: 600;
+}
+
+.reserva-card p {
+ text-align: center;
+ font-size: 0.9rem;
+ color: #2b5288;
+ margin-bottom: 1.5rem;
+}
+
+.input-group {
+ position: relative;
+ margin-bottom: 1rem;
+}
+
+.input-group input,
+.input-group select {
+ width: 100%;
+ padding: 0.8rem 2.5rem 0.8rem 1rem;
+ border: none;
+ border-radius: 6px;
+ background: #2b5288;
+ color: #f5f5f5;
+ font-size: 0.9rem;
+ outline: none;
+}
+
+.input-group .icon {
+ position: absolute;
+ right: 0.8rem;
+ top: 50%;
+ transform: translateY(-50%);
+ opacity: 0.7;
+}
+
+.row {
+ display: flex;
+ gap: 0.8rem;
+}
+
+button {
+ width: 100%;
+ padding: 0.9rem;
+ border: none;
+ border-radius: 30px;
+ background-color: #2b5288;
+ color: #f5f5f5;
+ font-weight: 600;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+ background-color: #254879;
+
+}
+
+
+
+
+/* SECCIÓ CONTACTE*/
+
+
+.contacte-titol {
+  text-align: center;
+  font-family: 'Megant', sans-serif;
+  font-size: 2.8em;
+  color: #2b5288;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+}
+
+.contacte-grid {
+  display: flex;
+  gap: 70px;
+  background: #ede9e3;
+  padding: 80px 8%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contacte-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  min-width: 350px;
+  max-width: 400px;
+}
+
+.contacte-mapa iframe {
+  width: 350px;
+  height: 220px;
+  border-radius: 5px;
+  border: 2px solid #2b5288;
+  box-shadow: 0 4px 20px rgba(50, 80, 136, 0.08);
+}
+
+.contacte-oficina {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.05em;
+  color: #222;
+  box-shadow: 0 2px 10px rgba(50, 80, 136, 0.08);
+  width: 100%;
+}
+
+.contacte-oficina h3 {
+  color: #2b5288;
+  margin-bottom: 9px;
+  font-family: 'Megant', sans-serif;
+}
+
+.contacte-logo {
+  text-align: left;
+  width: 100%;
+   
+}
+
+.contacte-logo img {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+.contacte-right {
+  display: flex;
+  align-items: flex-start; /* Alinea el formulario arriba */
+  min-width: 370px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.contacte-form {
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(50, 80, 136, 0.07);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contacte-form h2 {
+  font-family: 'Megant', sans-serif;
+  color: #2b5288;
+  font-size: 2em;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.contacte-form label {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.contacte-form input,
+.contacte-form textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  padding: 8px 10px;
+  border: 1px solid #b3cde6;
+  border-radius: 7px;
+  background: #f4f6fa;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border 0.2s;
+   resize: none;
+}
+
+.contacte-form input:focus,
+.contacte-form textarea:focus {
+  border: 1.5px solid #2b5288;
+}
+
+.contacte-form button {
+  background: #2b5288;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.contacte-form button:hover {
+  background: #254879;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contacte-grid {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 5%;
+  }
+  .contacte-left, .contacte-right {
+    align-items: center;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+  .contacte-mapa iframe {
+    width: 100%;
+    min-width: 220px;
+    max-width: 400px;
+  }
+  .contacte-logo img {
+    align-self: center;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #2b5288;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 8%;
+  gap: 40px;
+}
+
+.footer-logo img {
+  height: 80px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 230px;
+  text-align: center;
+}
+
+.footer-info p {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.footer-info a:hover {
+  color: #d0e7f9;
+}
+
+.footer-social {
+  margin-top: 12px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  transition: filter 0.2s;
+}
+
+.footer-social a:hover img {
+  filter: invert(0.7) sepia(1) hue-rotate(170deg) saturate(5);
+}
+
+.footer-address {
+  min-width: 200px;
+  text-align: right;
+  font-size: 0.95em;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .footer-address {
+    text-align: center;
+  }
+}
+
+/* Responsive BAJOTI */
+@media (max-width: 1000px) {
+  .bajoti-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .bajoti-text {
+    max-width: 100%;
+  }
+
+  .bajoti-text p {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bajoti-image {
+    flex: 1 1 100%;
+  }
+
+  .bajoti-image img {
+    width: 100%;
+    height: auto;
+    max-width: 635px; /* perquè no creixi més del necessari */
+  }
+}
+
+/* Responsive CARTA */
+@media (max-width: 1000px) {
+  .carta-fila {
+    flex-direction: row;          /* manté els elements en fila */
+    overflow-x: auto;             /* scroll horitzontal si no caben */
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 0 5%;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carta-fila::-webkit-scrollbar {
+    display: none; /* amaga scrollbar */
+  }
+
+  .carta-titol {
+    flex: 0 0 auto;   /* manté mida fixa del títol */
+    scroll-snap-align: start;
+    font-size: 1.5em; /* redueix mida lletra */
+  }
+
+  .carta-plats {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 auto;       /* no es redimensioni */
+    scroll-snap-align: start;
+  }
+
+  .plat {
+    flex: 0 0 200px;      /* cada plat ocupa 200px */
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .plat img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carta-titol-principal {
+    font-size: 2em;       /* redueix títol principal */
+    margin-bottom: 50px;
+  }
+  .carta-titol h2 {
+    font-size: 1em;   /* menys grandària per mòbil */
+    letter-spacing: 1px; /* opcional, per ajustar espai entre lletres */
+    text-align: center;  /* centra el títol */
+  }
+}
