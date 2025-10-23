@@ -6,57 +6,80 @@
 }
 
 body {
-  background-color: #ede9e3; /* color diferent al blanc */
+  background-color: #ede9e3;
   margin: 0;
   padding: 0;
-   font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* HEADER */
-header {
-  background-color: #2b5288;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 10; /* per sobre del vídeo */
+/* === ESTILS PERSONALITZATS PER AL MENÚ BOOTSTRAP === */
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.1rem 0;
+  min-height: 50px;
 }
 
-.header-container {
+.navbar-brand {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 2rem;
-  width: 100%;
-  max-width: 100%;
+  gap: 12px;
 }
 
-.logo img {
+.navbar-brand img {
   height: 70px;
-  display: block;
-  margin-top: -10px
+  margin-top: -10px;
 }
 
-.navbar {
-  margin-left: 2rem;
-  flex: 1;
+.navbar-brand span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-}
-
-.nav-menu li a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+.nav-link {
+  color: white;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
 }
 
-.nav-menu li a:hover {
-  color:  rgb(190, 183, 183);
+.nav-link:hover {
+  color: #bebbb7;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #bebbb7;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    height: 60px;
+    margin-top: -5px;
+  }
+  
+  .navbar-brand span {
+    font-size: 1.4rem;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 /* HERO amb vídeo */
@@ -889,19 +912,19 @@ header {
     display: flex;
   }
 
-  /* ====== Estils de focus per navegació amb Tab ====== */
+  /* Estils de focus per navegació amb Tab  */
 a:focus,
 button:focus,
 input:focus,
 select:focus,
 textarea:focus,
 .discover-link:focus {
-  outline: 3px solid #2b5288;  /* color visible del focus */
-  outline-offset: 4px;          /* deixa espai fora de l'element */
-  border-radius: 4px;           /* lleugerament arrodonit */
+  outline: 3px solid #2b5288;  
+  outline-offset: 4px;         
+  border-radius: 4px;           
 }
 
-/* Opcional: només mostrar focus amb teclat (no amb clic) */
+/* Mostrar focus */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
