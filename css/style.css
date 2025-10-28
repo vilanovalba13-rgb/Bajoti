@@ -212,7 +212,7 @@ body {
   margin: 15px 0;
 }
 
-/* SECCIÓ SOM BAJOTI        */
+/* SECCIÓ SOM BAJOTI */
 
 .bajoti-section {
   padding: 5px 0 30px; /* Espai superior i inferior equilibrat */
@@ -395,7 +395,7 @@ h1, h2 {
 
 /* Títol destacat de la secció carta */
 .carta-titol-principal {
-  font-family: 'Megant', serif; /* Mantingut per coherència */
+  font-family: 'Megant', serif; 
 }
 
 /* HERO - "DESCOBREIX ELS NOSTRES PLATS" */
@@ -434,7 +434,6 @@ h1, h2 {
 }
 
 /* SECCIÓ RESERVA*/
-
 .reserva-section {
  background: url('../img/imatgereserva.jpeg') center/cover no-repeat;
  padding: 80px 0;
@@ -523,11 +522,7 @@ button:hover {
 }
 
 
-
-
 /* SECCIÓ CONTACTE*/
-
-
 .contacte-titol {
   text-align: center;
   font-family: 'Megant', sans-serif;
@@ -541,7 +536,7 @@ button:hover {
  .form-title {
   font-family: 'Megant', sans-serif;
   color: #2b5288;
-  font-size: 2em; /* Ajusta aquest valor per fer-lo més gran (ex. 2.5em o 3em) */
+  font-size: 2em; 
   margin-bottom: 8px;
   text-align: center;
 }
@@ -603,7 +598,7 @@ button:hover {
 
 .contacte-right {
   display: flex;
-  align-items: flex-start; /* Alinea el formulario arriba */
+  align-items: flex-start; 
   min-width: 370px;
   max-width: 420px;
   width: 100%;
@@ -697,14 +692,11 @@ button:hover {
 
 /*FOOTER BOOSTRAP*/
 footer {
-  background-color: #2b548d !important;
+  background-color: #2b548d;
 }
 footer a:hover {
-  color:  rgb(190, 183, 183) !important; 
+  color:  rgb(190, 183, 183); 
 }
-
-
-
 
 /* Responsive BAJOTI */
 @media (max-width: 1000px) {
@@ -732,15 +724,15 @@ footer a:hover {
   .bajoti-image img {
     width: 100%;
     height: auto;
-    max-width: 635px; /* perquè no creixi més del necessari */
+    max-width: 635px; 
   }
 }
 
 /* Responsive CARTA */
 @media (max-width: 1000px) {
   .carta-fila {
-    flex-direction: row;          /* manté els elements en fila */
-    overflow-x: auto;             /* scroll horitzontal si no caben */
+    flex-direction: row;         
+    overflow-x: auto;             
     -webkit-overflow-scrolling: touch;
     gap: 20px;
     padding: 0 5%;
@@ -748,24 +740,24 @@ footer a:hover {
   }
 
   .carta-fila::-webkit-scrollbar {
-    display: none; /* amaga scrollbar */
+    display: none; 
   }
 
   .carta-titol {
-    flex: 0 0 auto;   /* manté mida fixa del títol */
+    flex: 0 0 auto;  
     scroll-snap-align: start;
-    font-size: 1.5em; /* redueix mida lletra */
+    font-size: 1.5em; 
   }
 
   .carta-plats {
     display: flex;
     gap: 20px;
-    flex: 0 0 auto;       /* no es redimensioni */
+    flex: 0 0 auto;      
     scroll-snap-align: start;
   }
 
   .plat {
-    flex: 0 0 200px;      /* cada plat ocupa 200px */
+    flex: 0 0 200px;      
     max-width: 200px;
     text-align: center;
   }
@@ -776,13 +768,13 @@ footer a:hover {
   }
 
   .carta-titol-principal {
-    font-size: 2em;       /* redueix títol principal */
+    font-size: 2em;       
     margin-bottom: 50px;
   }
   .carta-titol h2 {
-    font-size: 1em;   /* menys grandària per mòbil */
-    letter-spacing: 1px; /* opcional, per ajustar espai entre lletres */
-    text-align: center;  /* centra el títol */
+    font-size: 1em;   
+    letter-spacing: 1px; 
+    text-align: center;  
   }
 }
 /* MENÚ HAMBURGUESA */
@@ -800,82 +792,7 @@ header {
   height: 60px;
 }
 
-/* MENÚ NORMAL (ordinador) */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin-left: 2rem;
-}
-
-.nav-menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-menu li a:hover {
-  color: rgb(190, 183, 183);
-}
-
-/* BOTÓ HAMBURGUESA */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 22px;
-  cursor: pointer;
-  margin-left: auto; /* envia'l a la dreta */
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-/* Efecte X quan s'obre */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .menu-toggle {
-    display: flex; /* mostra l'hamburguesa */
-  }
-
-    .nav-menu {
-    position: absolute;
-    top: 100%;
-    right: auto; /* separació del costat dret */
-    left: 10rem;
-    width: 50%; /* abans era 100% */
-    background: #2b5288;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.2rem 0;
-    display: none;
-    border-radius: 0 0 10px 10px; /* vores arrodonides */
-  }
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  /* ====== Estils de focus per navegació amb Tab ====== */
+/* ====== Estils de focus per navegació amb Tab ====== */
 /* Estils de focus generals */
 a:focus,
 button:focus,
@@ -893,7 +810,8 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 .discover-link:focus-visible {
-    outline: 3px solid #ffffff; /* Rectangle blau per teclat */
+    outline: 3px solid #ffffff; 
     outline-offset: 4px;
     border-radius: 4px;
 }
+
