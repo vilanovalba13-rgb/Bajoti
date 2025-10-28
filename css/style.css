@@ -1,20 +1,21 @@
-/* Reset marges i padding */
+
+/* Elimina marges i padding per defecte i assegura un comportament coherent del box model */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === ESTILS GLOBALS === */
 body {
   background-color: #ede9e3;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* === ESTILS PERSONALITZATS PER AL MENÚ BOOTSTRAP === */
+/* === MENÚ BOOTSTRAP PERSONALITZAT === */
 .navbar {
-  font-family: 'Montserrat', sans-serif;
   padding: 0.1rem 0;
   min-height: 50px;
 }
@@ -27,18 +28,18 @@ body {
 
 .navbar-brand img {
   height: 70px;
-  margin-top: -10px;
+  margin-top: -10px; 
 }
 
 .navbar-brand span {
-  color: white;
+  color: #fff;
   font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: 1px;
 }
-
+/* === ENLLAÇOS DE NAVEGACIÓ === */
 .nav-link {
-  color: white !important;
+  color: #fff !important; /* Manté prioritat sobre Bootstrap */
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
@@ -49,6 +50,7 @@ body {
   color: #bebbb7 !important;
 }
 
+/* Subratllat animat a hover */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -64,28 +66,10 @@ body {
 .nav-link:hover::after {
   width: 80%;
 }
-
-/* RESPONSIVE */
-@media (max-width: 991px) {
-  .navbar-brand img {
-    height: 60px;
-    margin-top: -5px;
-  }
-  
-  .navbar-brand span {
-    font-size: 1.4rem;
-  }
-
-  .navbar-nav {
-    margin-top: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-/* HERO amb vídeo */
+/* === HERO AMB VÍDEO === */
 .hero {
   position: relative;
-  height: 100vh; /* ocupa tota la pantalla */
+  height: 100vh; /* Ocupa tota la pantalla */
   overflow: hidden;
 }
 
@@ -95,8 +79,7 @@ body {
   object-fit: cover;
   display: block;
 }
-
-/* Botons sobre el vídeo */
+/* === BOTONS SOBRE EL VÍDEO === */
 .video-buttons {
   position: absolute;
   top: 60%;
@@ -109,24 +92,23 @@ body {
 
 .video-buttons .btn {
   background: transparent;
-  color: rgb(255, 255, 255);
+  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: 'Megant', sans-serif;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .video-buttons .btn:hover {
-  color:  rgb(190, 183, 183);
+  color: #beb7b7;
 }
-
-/*Logo sobre el video*/
+/* === LOGO SOBRE EL VÍDEO === */
 .hero-title {
-  position: absolute; /* Col·loca el logo sobre el vídeo */
-  top: 35%; /* Centrat vertical, pots ajustar a 20% o 40% */
+  position: absolute;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centrat horitzontal i vertical */
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,85 +121,77 @@ body {
   width: 35vw;
   height: auto;
   display: block;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Ombra per contrast */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
-
-/* Overlay sobre el vídeo */
+/* === SECCIÓ "DESCOBREIX" === */
 .discover-section {
- position: absolute;
- left: 50%;
- top: 95%;
- transform: translate(-50%, -50%);
- z-index: 11;              /* més alt per sobre d'altres elements */
- text-align: center;
- pointer-events: auto;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  text-align: center;
 }
-
 
 .discover-link {
- display: inline-block;
- color: #ffffff;
- text-decoration: none;
- font-weight: 700;
- font-size: 1.05rem;
- padding: 8px 14px;
- background: rgba(0,0,0,0); /* Remove semitransparent background */
- border-radius: 0; /* Remove border radius */
- backdrop-filter: none; /* Remove blur effect */
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  padding: 8px 14px;
+  background: transparent; 
 }
-
 
 .discover-link .custom-arrow {
- display: block;
- margin-top: 6px;
- animation: bounce 1.6s infinite;
+  margin-top: 6px;
+  animation: bounce 1.6s infinite;
 }
-
-
+/* === ANIMACIÓ FLETXA === */
 @keyframes bounce {
- 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
- 40% { transform: translateY(6px); }
- 60% { transform: translateY(3px); }
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(6px); }
+  60% { transform: translateY(3px); }
 }
 
-
-/* CONTINGUT */
+/* === SECCIÓ DESTINS === */
 #Destins {
-  font-size: 1.2em;
-  margin-bottom: 18px;
-  text-align: center;
-  padding: 50px 20px;
   background-color: #ede9e3;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 50px 20px;
+  margin-bottom: 18px;
 }
 
 #Destins h1 {
-  margin-bottom: 32px;
   color: #2b5288;
   font-size: 2.8em;
+  margin-bottom: 32px;
 }
-
 
 #Destins p {
   margin-bottom: 28px;
 }
 
+/* === CONTENEDOR D’AMBIENTS === */
+
 .ambients-container {
   display: flex;
   justify-content: center;
-  gap: 80px;
   flex-wrap: wrap;
+  gap: 80px; /* Espai entre targetes */
 }
 
+/* === TARGETA D’AMBIENT === */
 .ambient-card {
   background-color: #2b5288;
   border-radius: 10px;
   overflow: hidden;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .ambient-card:hover {
@@ -229,148 +203,146 @@ body {
   height: 200px;
   object-fit: cover;
 }
-
-/* Nou estil per .ambient-title (substitueix .ambient-card h3) */
+/* === TÍTOL DE CADA AMBIENT === */
 .ambient-title {
   font-family: 'Megant', sans-serif;
   font-size: 1.5em;
+  color: #fff; /* Contrast amb el fons blau */
+  text-align: center;
   margin: 15px 0;
-  color: #ffffff; /* Manté el color blanc per contrast amb el fons #2b5288 */
-  text-align: center; /* Opcional, per centrar el text */
 }
 
-
-/* ======================== */
-/* SECCIÓ SOM BAJOTI       */
-/* ======================== */
+/* SECCIÓ SOM BAJOTI        */
 
 .bajoti-section {
-     padding: 5px 0 30px 0; /* 5px a dalt, 50px a baix */
-    text-align: center;
+  padding: 5px 0 30px; /* Espai superior i inferior equilibrat */
+  text-align: center;
 }
+
 .bajoti-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+/* === TEXT PRINCIPAL === */
 .bajoti-text h1 {
-    font-size: 3.3rem;
-    margin-bottom: 40px;
-     color: #2b5288;
-
+  font-size: 3.3rem;
+  color: #2b5288;
+  margin-bottom: 40px;
 }
+
 .bajoti-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-
-
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
+
+/* === IMATGE === */
 .bajoti-image img {
-    max-width: 80%;
-    height: auto;
-    margin: 10px 0;
+  max-width: 80%;
+  height: auto;
+  margin: 10px 0;
 }
+
+/* === TEXT ANIMAT (per GSAP) === */
 .animated-text {
-  white-space: normal;
+  white-space: normal; /* Permet que el text s’ajusti dins el contenidor */
 }
 
 .animated-text .word {
-  display: inline-block; /* les paraules es mantenen senceres */
-  white-space: nowrap;   /* impedeix tallar una paraula */
+  display: inline-block; /* Manté les paraules com unitats */
+  white-space: nowrap;   /* Evita trencar-les en dues línies */
 }
 
 .animated-text span {
-  display: inline-block; /* per animar cada lletra amb GSAP */
+  display: inline-block; /* Necessari per animar cada lletra individualment */
 }
 
-/* --- Títol Destacats --- */
-
+/* SECCIÓ DESTACATS / EXPERIÈNCIES */
 #Destacats,
 .experiencies-section {
- background-color: #2b5288; /* blau — canvia el codi si en vols un altre */
- color: #ffffff;
- padding: 40px 0;
- }
-.experiencies-titol {
-  text-align: center;         /* centra el text */
-  margin-top: 25px;           /* espai abans del títol */
-  margin-bottom: 30px;        /* espai entre el títol i el slider */
-
-
+  background-color: #2b5288; 
+  color: #fff;
+  padding: 40px 0;
 }
+
+/* === TÍTOL === */
+.experiencies-titol {
+  text-align: center;
+  margin: 25px 0 30px; /* Espai abans i després del títol */
+}
+
 .experiencies-titol h2 {
   font-family: 'Megant', sans-serif;
-  font-size: 3em;            /* mida del text */
-  font-weight: 700;          /* gruix mitjà */
-  color: #ffffff;           /* color del text (pots canviar-ho) */
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
 }
-/* --- proba stories deslizar --- */
+
+/* === SLIDER HORITZONTAL (stories) === */
 .slider {
-  display: flex;                      /* posa les imatges en fila */
-  gap: 30px;                          /* espai entre imatges */
-  overflow-x: auto;                   /* activa scroll horitzontal */
-  scroll-snap-type: x mandatory;      /* s’atura a cada imatge */
-  -webkit-overflow-scrolling: touch;  /* desplaçament suau mòbil */
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Desplaçament suau en mòbil */
   padding: 10px;
-  scrollbar-width: none;              /* amaga barra (Firefox) */
+  scrollbar-width: none; /* Amaga barra en Firefox */
 }
+
 .slider::-webkit-scrollbar {
-  display: none;                      /* amaga barra (Chrome, Safari...) */
+  display: none; /* Amaga barra en Chrome, Safari... */
 }
+
 .slider img {
-  scroll-snap-align: center;
-  flex: 0 0 200px;  /* amplada de cada imatge */
-max-width: 200px;                
+  flex: 0 0 200px; /* Amplada fixa */
+  max-width: 200px;
   border-radius: 8px;
   user-select: none;
-   margin-top: 10px;    
+  scroll-snap-align: center;
+  margin-top: 10px;
 }
 
-
-
-/* --- CARTA --- */
+/* SECCIÓ CARTA (MENÚ) */
 .carta-section {
   background-color: #ede9e3;
   padding: 100px 8%;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Títol principal centrat */
+/* === TÍTOL PRINCIPAL === */
 .carta-titol-principal {
   text-align: center;
   color: #2b5288;
   font-size: 2.8em;
   font-weight: 700;
-  margin-bottom: 100px; /* separació gran abans d'ENTRANTS */
   letter-spacing: 2px;
+  margin-bottom: 100px; /* Separació abans del primer bloc de plats */
 }
-
-/* Fila amb ENTRANTS + plats */
+/* === FILA: ENTRANTS + PLATS === */
 .carta-fila {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 120px; /* separació gran entre ENTRANTS i fotos */
+  gap: 120px; /* Espai entre títol i plats */
   flex-wrap: nowrap;
 }
 
-/* ENTRANTS a l'esquerra */
+/* === COLUMNA D’ENTRANTS === */
 .carta-titol {
   flex: 0 0 200px;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .carta-titol h2 {
-    font-family: 'Montserrat', sans-serif;
-   font-size: 2em;
-   font-weight: 500;
-   color: #222;
-   letter-spacing: 1px; /* menys espai entre lletres */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 1px;
 }
 
-
-/* Plats */
+/* === PLATS === */
 .carta-plats {
   display: flex;
   gap: 50px;
@@ -387,60 +359,70 @@ max-width: 200px;
   width: 100%;
   height: 200px;
   object-fit: cover;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
-
+/* Nom del plat */
 .nom-plat {
   color: #222;
   font-size: 1em;
   margin-top: 10px;
 }
-/* Afegim separació extra entre cada carta-fila */
+/* === ESPAI ENTRE BLOCS === */
 .carta-fila + .carta-fila {
-  margin-top: 80px; /* ajusta a gust */
+  margin-top: 80px; /* Separació entre seccions de plats */
 }
 
-/*FONT*/
+/* TIPOGRAFIES GLOBALS      */
+
+/* Font local (Megant) */
 @font-face {
   font-family: 'Megant';
   src: url('./Megant.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
+  font-display: swap; /* Millora el rendiment i evita "flash" de text */
 }
+
+/* Tipografia base per defecte */
 body {
-  font-family: 'Montserrat', sans-serif; /* Tipografia principal */
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* Títols principals i subtítols */
 h1, h2 {
-  font-family: 'Megant', serif; /* Per títols */
+  font-family: 'Megant', serif; /* Usa Megant per donar personalitat */
 }
 
+/* Títol destacat de la secció carta */
 .carta-titol-principal {
-  font-family: 'Megant', sans-serif; /* Exemple amb Google Fonts */
+  font-family: 'Megant', serif; /* Mantingut per coherència */
 }
-/* --- HERO CARTA SIMPLE --- */
+
+/* HERO - "DESCOBREIX ELS NOSTRES PLATS" */
+
 .hero-carta {
   position: relative;
   height: 100vh;
-  background: url('fondo-carta.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  /*  Fons principal  */
+  background: url('../img/fotocarta1.jpg') center/cover no-repeat;
 }
 
+/* Ombra o degradat sobre la imatge de fons */
 .hero-carta .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
 }
 
+/* Títol central del Hero */
 .hero-carta-titol {
   position: relative;
   color: #f5e8d8;
@@ -448,10 +430,7 @@ h1, h2 {
   font-size: 3rem;
   font-weight: 800;
   text-align: center;
-  z-index: 1;
-}
-.hero-carta {
-  background: url('../img/fotocarta1.jpg') center/cover no-repeat;
+  z-index: 1; /* Per sobre del degradat */
 }
 
 /* SECCIÓ RESERVA*/
